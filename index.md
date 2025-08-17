@@ -1,12 +1,14 @@
-# Darius — CS PhD @ MSU
+# Aliakbar Nafar
 
-Welcome! I'm Darius, a 5th-year Computer Science PhD student at Michigan State University. My research spans NLP and large language models (LLMs), Bayesian Networks (BNs), and neuro-symbolic reasoning.
 
-Current focus:
+## Summary
+PhD candidate in NLP and LLMs with NAACL 2025 Outstanding Paper. 5+ years building production LLM and neuro-symbolic AI models. Open-source project lead with 12+ cross-institution collaborators. Specialty in in-context learning, reasoning, and evaluation.
 
-- Parameterizing Bayesian Networks with LLMs, exploring methods like Evidence-Directed Priors (EDP) and Evidence-Projected Knowledge (EPK)
-- Preparing an AAAI 2026 paper
 
-Use the navigation to explore research interests, publications, projects, teaching, service, and notes.
+## Current Projects
 
-> Tip: This site is built with MkDocs + Material. Edit any page in `docs/` as Markdown.
+- Develop an agentic coding framework that can autonomously work with Python-based GitHub projects, even when documentation is sparse and bugs are present.
+- Build an end-to-end benchmark for choosing neuro-symbolic AI frameworks that weighs both engineering effort and performance.
+- Design an A/B testing framework to evaluate how prompt design influences user trust in AI.
+
+## News
