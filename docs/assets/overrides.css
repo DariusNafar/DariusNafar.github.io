@@ -52,3 +52,90 @@
 .gallery-slider::-webkit-scrollbar { height: 10px; }
 .gallery-slider::-webkit-scrollbar-track { background: rgba(0,0,0,0.05); border-radius: 10px; }
 .gallery-slider::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.25); border-radius: 10px; }
+
+/* --- Responsive fixes for small screens and content overflow --- */
+@media (max-width: 991px) {
+  .navbar .navbar-collapse {
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+  .profile-card {
+    position: static;
+    top: auto;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .profile-card {
+    position: sticky;
+    top: 80px;
+  }
+}
+
+/* Ensure media scales within content */
+[role="main"] img,
+[role="complementary"] img,
+.content img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent code blocks from breaking layout */
+[role="main"] pre,
+[role="main"] code {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Make tables scrollable on small screens without breaking layout */
+[role="main"] table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+[role="main"] iframe,
+[role="main"] video {
+  max-width: 100%;
+}
+
+
+/* Prevent fixed navbar from overlapping content on small/medium screens */
+@media (max-width: 1199px) {
+  .navbar-fixed-top { position: static; }
+  body { padding-top: 0 !important; }
+}
+
+
+/* Tweak profile photo size on stacked layout (small screens) */
+@media (max-width: 991px) {
+  .profile-card img {
+    display: block;
+    max-width: 120px !important; /* override inline max-width: 50% */
+    width: auto;
+    height: auto;
+    margin: 0 auto 15px; /* center under name */
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-card img {
+    max-width: 96px !important; /* even smaller on very narrow phones */
+  }
+}
+
+/* Prevent TOC (right sidebar) from colliding with top navbar */
+@media (min-width: 1200px) {
+  .bs-sidebar.affix {
+    top: 80px; /* keep below fixed navbar */
+  }
+}
+@media (max-width: 1199px) {
+  .bs-sidebar.affix {
+    position: static !important; /* disable affix on smaller screens */
+    top: auto;
+  }
+}

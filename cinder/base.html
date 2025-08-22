@@ -71,41 +71,43 @@
 
     <div class="container">
         {% block content %}
-        <div class="col-md-2">
-          <div class="profile-card" style="position: sticky; top: 80px;">
-            <img src="{{ 'assets/Profile.jpg'|url }}" alt="Profile photo" style="max-width: 50%; border-radius: 50%; margin-bottom: 15px;">
-            <div class="contact-links" style="text-align: left;">
-              <ul class="list-unstyled" style="margin-bottom: 10px;">
-                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span>Michigan, USA</span></li>
-                <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:&#110;&#97;&#102;&#97;&#114;&#97;&#108;&#105;&#64;&#109;&#115;&#117;&#46;&#101;&#100;&#117;">Email</a></li>
-                <li><i class="far fa-file-alt" aria-hidden="true"></i> <a href="{{ 'assets/Nafar_CV.pdf'|url }}">CV</a></li>
+        <div class="row">
+          <div class="col-md-2">
+            <div class="profile-card">
+              <img src="{{ 'assets/Profile.jpg'|url }}" alt="Profile photo" style="max-width: 50%; border-radius: 50%; margin-bottom: 15px;">
+              <div class="contact-links" style="text-align: left;">
+                <ul class="list-unstyled" style="margin-bottom: 10px;">
+                  <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span>Michigan, USA</span></li>
+                  <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:&#110;&#97;&#102;&#97;&#114;&#97;&#108;&#105;&#64;&#109;&#115;&#117;&#46;&#101;&#100;&#117;">Email</a></li>
+                  <li><i class="far fa-file-alt" aria-hidden="true"></i> <a href="{{ 'assets/Nafar_CV.pdf'|url }}">CV</a></li>
 
-                {% for s in config.extra.social %}
-                  {% set n = s.name|lower %}
-                  {% if 'github' in n %}
-                    {% set icon_class = 'fab fa-github' %}
-                  {% elif 'linkedin' in n %}
-                    {% set icon_class = 'fab fa-linkedin' %}
-                  {% elif 'scholar' in n %}
-                    {% set icon_class = 'fas fa-graduation-cap' %}
-                  {% elif 'twitter' in n %}
-                    {% set icon_class = 'fab fa-x-twitter' %}
-                  {% else %}
-                    {% set icon_class = 'fas fa-link' %}
-                  {% endif %}
-                  <li><i class="{{ icon_class }}" aria-hidden="true"></i> <a href="{{ s.link }}" target="_blank" rel="noopener">{{ s.name }}</a></li>
-                {% endfor %}
-              </ul>
+                  {% for s in config.extra.social %}
+                    {% set n = s.name|lower %}
+                    {% if 'github' in n %}
+                      {% set icon_class = 'fab fa-github' %}
+                    {% elif 'linkedin' in n %}
+                      {% set icon_class = 'fab fa-linkedin' %}
+                    {% elif 'scholar' in n %}
+                      {% set icon_class = 'fas fa-graduation-cap' %}
+                    {% elif 'twitter' in n %}
+                      {% set icon_class = 'fab fa-x-twitter' %}
+                    {% else %}
+                      {% set icon_class = 'fas fa-link' %}
+                    {% endif %}
+                    <li><i class="{{ icon_class }}" aria-hidden="true"></i> <a href="{{ s.link }}" target="_blank" rel="noopener">{{ s.name }}</a></li>
+                  {% endfor %}
+                </ul>
 
+              </div>
             </div>
           </div>
+          {% if not page.meta.disable_toc and page.toc %}
+            <div class="col-md-7" role="main">{% include "content.html" %}</div>
+            <div class="col-md-3 hidden-print" role="complementary">{% include "toc.html" %}</div>
+          {% else %}
+            <div class="col-md-10" role="main">{% include "content.html" %}</div>
+          {% endif %}
         </div>
-        {% if not page.meta.disable_toc and page.toc %}
-          <div class="col-md-7" role="main">{% include "content.html" %}</div>
-          <div class="col-md-3 hidden-print" role="complementary">{% include "toc.html" %}</div>
-        {% else %}
-          <div class="col-md-10" role="main">{% include "content.html" %}</div>
-        {% endif %}
         {% endblock %}
     </div>
 
@@ -117,7 +119,6 @@
             <p>{% if config.copyright %}
             <small>{{ config.copyright }}</small><br>
             {% endif %}
-            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
             </p>
           {% endif %}
 
