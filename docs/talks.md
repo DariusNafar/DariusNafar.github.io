@@ -10,9 +10,9 @@ A selection of invited talks and conference presentations. Materials (slides, pa
 - **Date & Place:** April 29 – May 4, 2025 | Albuquerque, New Mexico, USA
 
 <div class="gallery-slider" aria-label="NAACL 2025 photo gallery" tabindex="0">
-  <img src="/assets/NAACL1.jpg" alt="NAACL 2025 — volunteering">
-  <img src="/assets/NAACL2.jpg" alt="NAACL 2025 — people attending">
-  <img src="/assets/NAACL3.jpg" alt="NAACL 2025 — presentation">
+  <img src="/assets/NAACL1.jpg" alt="NAACL 2025 — volunteering" style="width:400px; height:auto;">
+  <img src="/assets/NAACL2.jpg" alt="NAACL 2025 — people attending" style="width:400px; height:auto;">
+  <img src="/assets/NAACL3.jpg" alt="NAACL 2025 — presentation" style="width:400px; height:auto;">
 </div>
 
 ---
@@ -24,7 +24,7 @@ A selection of invited talks and conference presentations. Materials (slides, pa
 - **Date & Place:** February 25 – March 4, 2025 | Philadelphia, Pennsylvania, USA
 
 <div class="gallery-slider" aria-label="AAAI 2025 photo gallery" tabindex="0">
-  <img src="/assets/AAAI1.jpg" alt="AAAI 2025 — presentation">
+  <img src="/assets/AAAI1.jpg" alt="AAAI 2025 — presentation" style="width:400px; height:auto;">
 </div>
 
 ---
@@ -37,7 +37,7 @@ A selection of invited talks and conference presentations. Materials (slides, pa
 
 
 <div class="gallery-slider" aria-label="MSLD 2025 photo gallery" tabindex="0">
-  <img src="/assets/MSLD1.jpg" alt="MSLD 2025 — poster presentation">
+  <img src="/assets/MSLD1.jpg" alt="MSLD 2025 — poster presentation" style="width:400px; height:auto;">
 </div>
 
 ---
