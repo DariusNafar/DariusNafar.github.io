@@ -1,10 +1,5 @@
 # Work Experience
 
-### Data Scientist Intern @ Microsoft 
-> Sep 2025 – Dec 2025  
-
-- Offer accepted. Incoming Fall 2025
-
 ### Project Lead / Software Developer @ DomiKnowS
 > Jan 2021 – Dec 2025  
 
