@@ -4,7 +4,7 @@
 >_Aug 2024 - Present
 
 - Build an interactive agentic coder with LangGraph, FastAPI, \& RAG to generate and debug code to fine-tune collaborative LLMs
-- item Boost coding speed and accuracy for non-expert users. planned submission to EACL 2026 Demo
+- Boost coding speed and accuracy for non-expert users. planned submission to EACL 2026 Demo
 
 ### Human–AI Trust & Relationship Modeling in Conversational Agents 
 >_Mar 2025 – Oct 2025_
