@@ -4,13 +4,13 @@
 >_Aug 2024 - Present
 
 - Build an interactive agentic coder with LangGraph, FastAPI, \& RAG to generate and debug code to fine-tune collaborative LLMs
-- Train LLMs using reinforcement learning (GRPO and DPO), reducing model size by 45\%. Planned submission for JAIR
+- item Boost coding speed and accuracy for non-expert users. planned submission to EACL 2026 Demo
 
 ### Human–AI Trust & Relationship Modeling in Conversational Agents 
 >_Mar 2025 – Oct 2025_
 
 - Designed prompts, an A/B-testing framework, and a full-stack agentic chatbot (FastAPI, LangChain) to assess trust.
-- Doubled user engagement and improved task completion by 30% among 12 pilot users in Phase 1 via optimal prompting strategy.
+- Improve user engagement and improved task completion among 12 pilot users in Phase 1 via optimal prompting strategy.
 
 ### In-Context Learning vs Retrieval for Data-Efficient LLM Reasoning
 >_Jan 2024 – Dec 2024_
