@@ -4,11 +4,6 @@
 ## Summary
 PhD in NLP and LLMs with NAACL 2025 Outstanding Paper. 5+ years building production LLM and neuro-symbolic AI models. Open-source project lead with 12+ cross-institution collaborators. Specialty in fine-tuning \& training LLMs, in-context learning \& reasoning.
 
-## Current Projects
-
-- Build an interactive agentic coder with LangGraph, FastAPI, and RAG to generate and debug code to fine-tune collaborative LLMs using reinforcement learning.
-- Design an A/B testing framework to evaluate how prompt design influences user trust in AI.
-
 ## News
 - Serving as a reviewer for COLM 2026. (January, 2026)
 - Serving as a reviewer for ACL Rolling Review January cycle. (January, 2026)
