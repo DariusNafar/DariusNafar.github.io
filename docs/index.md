@@ -12,7 +12,7 @@ PhD in NLP and LLMs with NAACL 2025 Outstanding Paper. 5+ years building product
 ## News
 - Serving as a reviewer for COLM 2026. (January, 2026)
 - Serving as a reviewer for ACL Rolling Review January cycle. (January, 2026)
-- Our paper arXived in ['An Agentic Framework for Neuro-Symbolic Programming'](https://arxiv.org/abs/2601.00743). (January, 2025)
+- Our paper arXived in "[An Agentic Framework for Neuro-Symbolic Programming](https://arxiv.org/abs/2601.00743)". (January, 2025)
 - Serving as a reviewer for the journal of Transactions on Machine Learning Research (TMLR). (October, 2025)
 - Serving as a reviewer for ACL Rolling Review October cycle. (October, 2025)
 - AAAI 2026 preprint [arXiv](https://arxiv.org/abs/2505.15918) and [GitHub](https://github.com/HLR/llm-bn-parameterization) updated. (August 13, 2025)
