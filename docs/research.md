@@ -1,7 +1,7 @@
 # Research
 
 ### Interactive Agentic Code Generation with to fine-tune LLMs
->_Aug 2024 - Present
+>_Aug 2025 - Dec 2025_
 
 - Build an interactive agentic coder with LangGraph, FastAPI, \& RAG to generate and debug code to fine-tune collaborative LLMs
 - Boost coding speed and accuracy for non-expert users. planned submission to EACL 2026 Demo

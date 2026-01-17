@@ -1,5 +1,9 @@
 # Publications
 
+- #### **An Agentic Framework for Neuro-Symbolic Programming**  
+    *Aliakbar Nafar, Chetan Chigurupati, Danial Kamali, Hamid Karimian, Parisa Kordjamshidi*  
+    Submitted to EACL 2026 Demo
+
 - #### **Reasoning over Uncertain Text by Generative Large Language Models**  
     *Aliakbar Nafar, Kristen Brent Venable, Parisa Kordjamshidi*  
     AAAI 2025  

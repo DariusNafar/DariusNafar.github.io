@@ -1,7 +1,12 @@
 # Work Experience
 
+### AI Extern @ BetterHelp
+> Dec 2025 – Present
+
+- Fine-tune LLMs to reduce their stigma in therapy for better alignment and responding to patients
+
 ### Project Lead / Software Developer @ DomiKnowS
-> Jan 2021 – Dec 2025  
+> Jan 2021 – Aug 2025  
 
 - Lead and mentor a cross-functional team of 12+ researchers and developers
 - Foster collaboration and communication in designing and implementing a Neuro-Symbolic framework using Python & Pytorch
