@@ -38,7 +38,8 @@
   scroll-snap-align: start;
 }
 .gallery-slider img {
-  height: 100px; /* compact height to save vertical space */
+  height: 50vh;
+  max-height: 500px;
   width: auto;
   border-radius: 6px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.15);
@@ -50,7 +51,8 @@
 }
 @media (max-width: 576px) {
   .gallery-slider img {
-    height: 80px;
+    height: 40vh;
+    max-height: 280px;
   }
 }
 /* Optional: subtle scrollbar styling on WebKit */
@@ -158,7 +160,8 @@
 .gallery-slider.gallery-enhanced > img {
   display: none;
   max-width: 100%;
-  height: 100px;
+  height: 50vh;
+  max-height: 500px;
   width: auto;
 }
 .gallery-slider.gallery-enhanced > img.is-active {
@@ -200,6 +203,7 @@
 
 @media (max-width: 576px) {
   .gallery-slider.gallery-enhanced > img {
-    height: 80px;
+    height: 40vh;
+    max-height: 280px;
   }
 }
