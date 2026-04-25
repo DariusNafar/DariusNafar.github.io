@@ -2,9 +2,10 @@
 
 
 ## Summary
-PhD in NLP and LLMs with NAACL 2025 Outstanding Paper. 5+ years building production LLM and neuro-symbolic AI models. Open-source project lead with 12+ cross-institution collaborators. Specialty in fine-tuning \& training LLMs, in-context learning \& reasoning.
+PhD in NLP and LLMs with NAACL 2025 Outstanding Paper. 5+ years building production LLM and neuro-symbolic AI models. Open-source project lead with 12+ cross-institution collaborators. Specialty in fine-tuning and training LLMs, in-context learning and reasoning.
 
 ## News
+- Serving as a reviewer for ACL Rolling Review March cycle. (March, 2026)
 - Serving as a reviewer for COLM 2026. (January, 2026)
 - Serving as a reviewer for ACL Rolling Review January cycle. (January, 2026)
 - Our paper arXived in "[An Agentic Framework for Neuro-Symbolic Programming](https://arxiv.org/abs/2601.00743)". (January, 2025)
