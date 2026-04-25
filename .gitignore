@@ -1,0 +1,7 @@
+.DS_Store
+.idea/
+.venv/
+site/
+note.txt
+__pycache__/
+*.pyc

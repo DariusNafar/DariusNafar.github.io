@@ -12,7 +12,8 @@ mkdocs serve
 
 ## Deploy
 
+Pushing to `main` auto-deploys via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) — MkDocs builds the site and publishes it to the `gh-pages` branch.
+
 ```bash
-pip install mkdocs
-mkdocs gh-deploy -b gh-pages --force
+git push origin main
 ```
