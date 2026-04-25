@@ -1,16 +1,16 @@
 # Research
 
-### Interactive Agentic Code Generation with to fine-tune LLMs
->_Aug 2025 - Dec 2025_
+### Interactive Agentic Code Generation for Fine-Tuning LLMs
+>_Aug 2025 – Dec 2025_
 
-- Build an interactive agentic coder with LangGraph, FastAPI, \& RAG to generate and debug code to fine-tune collaborative LLMs
-- Boost coding speed and accuracy for non-expert users. planned submission to EACL 2026 Demo
+- Built an interactive agentic coder with LangGraph, FastAPI, and RAG to generate and debug code for fine-tuning collaborative LLMs.
+- Improved coding speed and accuracy for non-expert users; submitted to NeSy 2026.
 
 ### Human–AI Trust & Relationship Modeling in Conversational Agents 
 >_Mar 2025 – Oct 2025_
 
 - Designed prompts, an A/B-testing framework, and a full-stack agentic chatbot (FastAPI, LangChain) to assess trust.
-- Improve user engagement and improved task completion among 12 pilot users in Phase 1 via optimal prompting strategy.
+- Improved user engagement and task completion among 12 pilot users in Phase 1 via an optimized prompting strategy.
 
 ### In-Context Learning vs Retrieval for Data-Efficient LLM Reasoning
 >_Jan 2024 – Dec 2024_
@@ -22,7 +22,7 @@
 >_May 2023 – Jul 2025_
 
 - Created a Bayesian-inference dataset; prompt-engineered coding methods improved accuracy by 40%, leading to an AAAI 2025 publication.
-- Used LLMs to emulate expert probability judgments, improving Bayesian-network accuracy by 7%; submitted to AAAI 2026.
+- Used LLMs to emulate expert probability judgments, improving Bayesian-network accuracy by 7%; submitted to TMLR.
 
 ### Developing a Neuro-Symbolic Deep Learning Library for Constraint-Based Learning 
 >_Jan 2021 – Sept 2025_

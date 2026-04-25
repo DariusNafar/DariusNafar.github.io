@@ -7,6 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% if config.site_description %}<meta name="description" content="{{ config.site_description }}">{% endif %}
     {% if config.site_author %}<meta name="author" content="{{ config.site_author }}">{% endif %}
+    {% if config.extra and config.extra.meta %}
+        {% for meta in config.extra.meta %}
+            {% if not (meta.get('name') == 'description' and config.site_description) %}
+                {% if meta.get('name') and meta.get('content') %}
+    <meta name="{{ meta.get('name')|e }}" content="{{ meta.get('content')|e }}">
+                {% elif meta.get('property') and meta.get('content') %}
+    <meta property="{{ meta.get('property')|e }}" content="{{ meta.get('content')|e }}">
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
     {% if page.canonical_url %}<link rel="canonical" href="{{ page.canonical_url }}">{% endif %}
     <link rel="shortcut icon" href="{{ 'img/favicon.ico'|url }}">
 
@@ -16,9 +27,9 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
-    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href="https://rsms.me/inter/inter.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin" rel="stylesheet" type="text/css">
     <link href="{{ 'css/bootstrap-custom.min.css'|url }}" rel="stylesheet">
     <link href="{{ 'css/base.min.css'|url }}" rel="stylesheet">
     <link href="{{ 'css/cinder.min.css'|url }}" rel="stylesheet">
@@ -26,11 +37,7 @@
     {% if config.theme.highlightjs is defined and config.theme.highlightjs is sameas false %} 
 
     {% else %}
-        {% if config.theme.colorscheme %}
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/{{ config.theme.colorscheme }}.min.css">
-        {% else %}
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
-        {% endif %}
+        <link href="{{ 'css/highlight.min.css'|url }}" rel="stylesheet">
     {% endif %}
 
     {%- for path in config['extra_css'] %}
@@ -71,8 +78,7 @@
 
     <div class="container">
         {% block content %}
-        <div class="row">
-          <div class="col-md-2">
+        {% macro profile_card() -%}
             <div class="profile-card">
               <img src="{{ 'assets/Profile.jpg'|url }}" alt="Profile photo" style="max-width: 50%; border-radius: 50%; margin-bottom: 15px;">
               <div class="contact-links" style="text-align: left;">
@@ -100,12 +106,15 @@
 
               </div>
             </div>
-          </div>
+        {%- endmacro %}
+        <div class="row">
           {% if not page.meta.disable_toc and page.toc %}
-            <div class="col-md-7" role="main">{% include "content.html" %}</div>
+            <div class="col-md-7 col-md-push-2" role="main">{% include "content.html" %}</div>
+            <div class="col-md-2 col-md-pull-7">{{ profile_card() }}</div>
             <div class="col-md-3 hidden-print" role="complementary">{% include "toc.html" %}</div>
           {% else %}
-            <div class="col-md-10" role="main">{% include "content.html" %}</div>
+            <div class="col-md-10 col-md-push-2" role="main">{% include "content.html" %}</div>
+            <div class="col-md-2 col-md-pull-10">{{ profile_card() }}</div>
           {% endif %}
         </div>
         {% endblock %}
@@ -131,19 +140,13 @@
     {% endif %}
 
     {%- block scripts %}
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{{ 'js/jquery-3.6.0.min.js'|url }}"></script>
     <script src="{{ 'js/bootstrap-3.0.3.min.js'|url }}"></script>
 
     {% if config.theme.highlightjs is defined and config.theme.highlightjs is sameas false %}  <!-- default is to include highlightjs -->
     
     {% else %}
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
-        {% if config.theme.hljs_languages %}
-            {%- for lang in config.theme.hljs_languages %}
-                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/{{lang}}.min.js"></script>
-            {%- endfor %}
-        {% endif %}
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script>if (window.hljs && window.hljs.initHighlightingOnLoad) { window.hljs.initHighlightingOnLoad(); }</script>
     {% endif %}
 
     <script>var base_url = {{ base_url | tojson }}</script>

@@ -1,5 +1,5 @@
 site_name: Aliakbar Nafar (Darius)
-site_description: Research in NLP, LLMs, and neuro-symbolic reasoning
+site_description: Research in NLP, LLMs, and neuro-symbolic reasoning by Darius (CS PhD @ MSU)
 site_url: https://dariusnafar.github.io
 repo_url: https://github.com/DariusNafar/DariusNafar.github.io
 theme:
@@ -36,7 +36,7 @@ extra:
     - name: description
       content: Research in NLP, LLMs, and neuro-symbolic reasoning by Darius (CS PhD @ MSU)
     - property: og:title
-      content: Darius — CS PhD @ MSU
+      content: Darius - CS PhD @ MSU
     - property: og:description
       content: Research in NLP, LLMs, and neuro-symbolic reasoning
     - property: og:type
@@ -44,15 +44,15 @@ extra:
     - property: og:url
       content: https://dariusnafar.github.io
     - property: og:image
-      content: /assets/social-card.svg
+      content: https://dariusnafar.github.io/assets/social-card.svg
     - name: twitter:card
       content: summary_large_image
     - name: twitter:title
-      content: Darius — CS PhD @ MSU
+      content: Darius - CS PhD @ MSU
     - name: twitter:description
       content: Research in NLP, LLMs, and neuro-symbolic reasoning
     - name: twitter:image
-      content: /assets/social-card.svg
+      content: https://dariusnafar.github.io/assets/social-card.svg
 
 extra_css:
   - assets/overrides.css
