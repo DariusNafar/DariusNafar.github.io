@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Aliakbar Nafar research profile</title>
+  <desc id="desc">Social sharing card for Aliakbar Nafar, CS PhD at Michigan State University.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#102A43"/>
+      <stop offset="54%" stop-color="#1F4E5F"/>
+      <stop offset="100%" stop-color="#0B6E69"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#background)"/>
+  <rect x="72" y="72" width="1056" height="486" rx="24" fill="rgba(255,255,255,0.92)"/>
+  <text x="120" y="190" fill="#102A43" font-family="Inter, Arial, sans-serif" font-size="68" font-weight="700">Aliakbar Nafar</text>
+  <text x="120" y="260" fill="#1F4E5F" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="600">CS PhD @ Michigan State University</text>
+  <text x="120" y="350" fill="#263238" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="500">NLP, LLMs, and Neuro-Symbolic Reasoning</text>
+  <text x="120" y="430" fill="#455A64" font-family="Inter, Arial, sans-serif" font-size="28">NAACL 2025 Outstanding Paper Award</text>
+  <text x="120" y="480" fill="#455A64" font-family="Inter, Arial, sans-serif" font-size="28">dariusnafar.github.io</text>
+</svg>
