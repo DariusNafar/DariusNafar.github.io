@@ -6,11 +6,11 @@ PhD in NLP and LLMs with NAACL 2025 Outstanding Paper. 5+ years building product
 
 ## News
 - Serving as a reviewer for [ACL Rolling Review](https://aclrollingreview.org/) March cycle. (March, 2026)
-- Submitted "[Extracting Probabilistic Knowledge from Large Language Models for Bayesian Network Parameterization](https://arxiv.org/abs/2505.15918)" to TMLR. (January, 2026)
+- Submitted "[Extracting Probabilistic Knowledge from Large Language Models for Bayesian Network Parameterization](https://arxiv.org/abs/2505.15918)" to [TMLR](https://jmlr.org/tmlr/). (January, 2026)
 - Serving as a reviewer for [COLM 2026](https://colmweb.org/). (January, 2026)
 - Serving as a reviewer for [ACL Rolling Review](https://aclrollingreview.org/) January cycle. (January, 2026)
 - Our paper "[An Agentic Framework for Neuro-Symbolic Programming](https://arxiv.org/abs/2601.00743)" was posted to arXiv. (January, 2026)
-- Serving as a reviewer for the journal of Transactions on Machine Learning Research (TMLR). (October, 2025)
+- Serving as a reviewer for the journal of [Transactions on Machine Learning Research (TMLR)](https://jmlr.org/tmlr/). (October, 2025)
 - Serving as a reviewer for [ACL Rolling Review](https://aclrollingreview.org/) October cycle. (October, 2025)
 - Bayesian-network parameterization preprint [arXiv](https://arxiv.org/abs/2505.15918) and [GitHub](https://github.com/HLR/llm-bn-parameterization) updated. (August 13, 2025)
 - Invited to serve on the [AAAI 2026](https://aaai.org/conference/aaai/aaai-26/) Program Committee. (July, 2025)
