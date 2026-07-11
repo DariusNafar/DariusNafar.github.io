@@ -4,9 +4,9 @@ A selection of invited talks and conference presentations. Materials (slides, pa
 
 
 ### 2025 Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics
-- **Title:** Learning vs Retrieval: The Role of In-Context Examples in Regression with LLMs*
+- **Title:** Learning vs Retrieval: The Role of In-Context Examples in Regression with LLMs
 - **Event:** [NAACL 2025](https://2025.naacl.org/) 
-- **Type:** Oral *([Outstanding Paper Award ](https://2025.naacl.org/blog/best-papers/)🏆)*
+- **Type:** Oral *([Outstanding Paper Award](https://2025.naacl.org/blog/best-papers/) 🏆)*
 - **Date & Place:** April 29 – May 4, 2025 | Albuquerque, New Mexico, USA
 
 <div class="gallery-slider" aria-label="NAACL 2025 photo gallery" tabindex="0">

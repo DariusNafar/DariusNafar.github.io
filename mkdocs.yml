@@ -1,10 +1,20 @@
 site_name: Aliakbar Nafar (Darius)
 site_description: Research in NLP, LLMs, and neuro-symbolic reasoning by Darius (CS PhD @ MSU)
-site_url: https://dariusnafar.github.io
+site_author: Aliakbar Nafar
+site_url: https://www.anafar.me/
 repo_url: https://github.com/DariusNafar/DariusNafar.github.io
 theme:
   name: null
   custom_dir: 'cinder'
+  # With name: null, MkDocs never reads cinder/mkdocs_theme.yml, so the
+  # theme settings it would provide must be declared here instead.
+  static_templates:
+    - 404.html
+  shortcuts:
+    help: 191    # ?
+    next: 78     # n
+    previous: 80 # p
+    search: 83   # s
 
 nav:
   - Home: index.md
@@ -42,9 +52,13 @@ extra:
     - property: og:type
       content: website
     - property: og:url
-      content: https://dariusnafar.github.io
+      content: https://www.anafar.me/
     - property: og:image
-      content: https://dariusnafar.github.io/assets/social-card.svg
+      content: https://www.anafar.me/assets/social-card.png
+    - property: og:image:width
+      content: "1200"
+    - property: og:image:height
+      content: "630"
     - name: twitter:card
       content: summary_large_image
     - name: twitter:title
@@ -52,7 +66,7 @@ extra:
     - name: twitter:description
       content: Research in NLP, LLMs, and neuro-symbolic reasoning
     - name: twitter:image
-      content: https://dariusnafar.github.io/assets/social-card.svg
+      content: https://www.anafar.me/assets/social-card.png
 
 extra_css:
   - assets/overrides.css

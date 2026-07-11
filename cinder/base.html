@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    {% block early_head %}{% endblock %}
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% if config.site_description %}<meta name="description" content="{{ config.site_description }}">{% endif %}
@@ -34,12 +35,6 @@
     <link href="{{ 'css/base.min.css'|url }}" rel="stylesheet">
     <link href="{{ 'css/cinder.min.css'|url }}" rel="stylesheet">
 
-    {% if config.theme.highlightjs is defined and config.theme.highlightjs is sameas false %} 
-
-    {% else %}
-        <link href="{{ 'css/highlight.min.css'|url }}" rel="stylesheet">
-    {% endif %}
-
     {%- for path in config['extra_css'] %}
     <link href="{{ path|url }}" rel="stylesheet">
     {%- endfor %}
@@ -49,25 +44,6 @@
             <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
         <![endif]-->
-
-    {% if config.google_analytics %}
-    <script>
-    (function(i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function() {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', '{{ config.google_analytics[0] }}', '{{ config.google_analytics[1] }}');
-    ga('send', 'pageview');
-    </script>
-    {% endif %}
 
     {% block extrahead %} {% endblock %}
 </head>
@@ -141,15 +117,9 @@
     <script src="{{ 'js/jquery-3.6.0.min.js'|url }}"></script>
     <script src="{{ 'js/bootstrap-3.0.3.min.js'|url }}"></script>
 
-    {% if config.theme.highlightjs is defined and config.theme.highlightjs is sameas false %}  <!-- default is to include highlightjs -->
-    
-    {% else %}
-    <script>if (window.hljs && window.hljs.initHighlightingOnLoad) { window.hljs.initHighlightingOnLoad(); }</script>
-    {% endif %}
-
     <script>var base_url = {{ base_url | tojson }}</script>
-    {% if config.shortcuts %}
-        <script>var shortcuts = {{ config.shortcuts | tojson }}</script>
+    {% if config.theme.shortcuts %}
+        <script>var shortcuts = {{ config.theme.shortcuts | tojson }}</script>
     {% endif %}
     <script src="{{ 'js/base.js'|url }}"></script>
     {%- for path in config['extra_javascript'] %}

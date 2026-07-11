@@ -36,7 +36,7 @@ NeSy 2024
   [Code](https://github.com/HLR/DomiKnowS/tree/AAAI23)  
 
 - #### **Teaching Probabilistic Logical Reasoning to Transformers**  
-  Aliakbar Nafar, Kristen Brent Venable, Parisa Kordjamshidi  
+  *Aliakbar Nafar, Kristen Brent Venable, Parisa Kordjamshidi*  
   Findings of EACL 2024  
   [ACL Anthology](https://aclanthology.org/2024.findings-eacl.112/)  
   [Code](https://github.com/HLR/Probabilistic_Logical_Reasoning)  
