@@ -17,7 +17,15 @@ jobs:
         with:
           # 403/429 accepted: arXiv, ACL Anthology, and publisher sites
           # often reject bot traffic while working fine for humans.
-          args: --no-progress --accept '100..=103,200..=299,403,429' 'docs/**/*.md'
+          # root-dir resolves root-relative /assets/... image links.
+          # ojs.aaai.org excluded: its broken HTTP/2 support fails lychee
+          # even though the links work in browsers.
+          args: >-
+            --no-progress
+            --accept '100..=103,200..=299,403,429'
+            --root-dir ${{ github.workspace }}/docs
+            --exclude 'ojs\.aaai\.org'
+            'docs/**/*.md'
           fail: false
       - name: Open issue for broken links
         if: steps.lychee.outputs.exit_code != 0
