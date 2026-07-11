@@ -1,0 +1,145 @@
+/* --- Brand colors (teal/navy, matching the monogram and social card) --- */
+:root {
+  --md-primary-fg-color: #0b6e69;
+  --md-primary-fg-color--light: #17948d;
+  --md-primary-fg-color--dark: #085550;
+  --md-accent-fg-color: #00897b;
+  --md-accent-fg-color--transparent: rgba(0, 137, 123, 0.1);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #0b6e69;
+  --md-accent-fg-color: #4db6ac;
+  --md-accent-fg-color--transparent: rgba(77, 182, 172, 0.1);
+  --md-typeset-a-color: #56c2b8;
+}
+
+/* Slightly wider content area than Material's default */
+.md-grid {
+  max-width: 66rem;
+}
+
+/* Keep fixed-width content images (e.g. news photos) inside the viewport */
+.md-typeset img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- Profile hero (homepage) --- */
+.profile-hero {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 0.5rem 0 1.5rem;
+}
+.profile-hero .profile-photo {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px var(--md-primary-fg-color), 0 4px 14px rgba(0, 0, 0, 0.25);
+  flex: 0 0 auto;
+}
+.profile-hero .profile-intro {
+  flex: 1 1 20rem;
+  min-width: 16rem;
+}
+.profile-hero h1 {
+  margin: 0 0 0.2em;
+}
+.profile-hero .tagline {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.85rem;
+  margin: 0 0 0.8em;
+}
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+.profile-links .md-button {
+  padding: 0.35em 0.9em;
+  font-size: 0.72rem;
+}
+@media (max-width: 480px) {
+  .profile-hero {
+    justify-content: center;
+    text-align: center;
+  }
+  .profile-links {
+    justify-content: center;
+  }
+}
+
+/* --- Photo gallery (progressive enhancement; JS turns it into a carousel) --- */
+.gallery-slider {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 6px 2px 10px 2px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 8px;
+}
+.gallery-slider > img {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  height: 50vh;
+  max-height: 500px;
+  width: auto;
+  border-radius: 8px;
+  box-shadow: var(--md-shadow-z1);
+}
+.gallery-caption {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.7rem;
+  margin: 4px 0 20px;
+}
+@media (max-width: 576px) {
+  .gallery-slider > img {
+    height: 40vh;
+    max-height: 280px;
+  }
+}
+
+.gallery-slider.gallery-enhanced {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  gap: 0;
+  scroll-snap-type: none;
+  -webkit-overflow-scrolling: auto;
+}
+.gallery-slider.gallery-enhanced > img {
+  display: none;
+  max-width: 100%;
+}
+.gallery-slider.gallery-enhanced > img.is-active {
+  display: block;
+}
+.gallery-slider.gallery-enhanced .gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  line-height: 36px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+.gallery-slider.gallery-enhanced .gallery-arrow:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+.gallery-slider.gallery-enhanced .gallery-arrow.prev { left: 6px; }
+.gallery-slider.gallery-enhanced .gallery-arrow.next { right: 6px; }
+.gallery-slider.gallery-enhanced::-webkit-scrollbar { display: none; }
