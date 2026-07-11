@@ -7,6 +7,7 @@ PhD in NLP and LLMs with NAACL 2025 Outstanding Paper. 5+ years building product
 ## News
 - Invited to serve as a reviewer for [AAAI 2027](https://aaai.org/conference/aaai/aaai-27/). (June, 2026)
 - Invited to serve as a reviewer for [NeSy 2026](https://2026.nesyconf.org/). (June, 2026)
+- Our paper "[Extracting Probabilistic Knowledge from Large Language Models for Bayesian Network Parameterization](https://arxiv.org/abs/2505.15918)" was published in [TMLR](https://jmlr.org/tmlr/). (May, 2026)
 - Serving as a reviewer for [ACL Rolling Review](https://aclrollingreview.org/) March cycle. (March, 2026)
 - Submitted "[Extracting Probabilistic Knowledge from Large Language Models for Bayesian Network Parameterization](https://arxiv.org/abs/2505.15918)" to [TMLR](https://jmlr.org/tmlr/). (January, 2026)
 - Serving as a reviewer for [COLM 2026](https://colmweb.org/). (January, 2026)

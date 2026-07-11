@@ -22,7 +22,7 @@
 >_May 2023 – Jul 2025_
 
 - Created a Bayesian-inference dataset; prompt-engineered coding methods improved accuracy by 40%, leading to an AAAI 2025 publication.
-- Used LLMs to emulate expert probability judgments, improving Bayesian-network accuracy by 7%; submitted to TMLR.
+- Used LLMs to emulate expert probability judgments, improving Bayesian-network accuracy by 7%; published in TMLR (2026).
 
 ### Developing a Neuro-Symbolic Deep Learning Library for Constraint-Based Learning 
 >_Jan 2021 – Sept 2025_
