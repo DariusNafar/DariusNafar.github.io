@@ -1,5 +1,14 @@
 /* Custom overrides to widen the page, especially the main content area, while preserving responsiveness. */
 
+/* Inline SVG icons (replacement for the FontAwesome icon font) */
+.svg-icon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+
 /* Default Bootstrap container widths are 750/970/1170. Increase for larger screens. */
 @media (min-width: 1200px) {
   .container {
