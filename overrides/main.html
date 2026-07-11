@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{#
+  Material emits <title>, meta description, and canonical link itself, but not
+  Open Graph / Twitter tags (those need the social plugin, which we skip to
+  avoid its image-processing dependencies) — so they are added here, matching
+  the titles Material generates.
+#}
+{% block extrahead %}
+  {% set social_title = config.site_name if page.is_homepage else page.title ~ ' - ' ~ config.site_name %}
+  {% set social_description = page.meta.description if page.meta and page.meta.description else config.site_description %}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ social_title }}">
+  <meta property="og:description" content="{{ social_description }}">
+  <meta property="og:url" content="{{ page.canonical_url if page.canonical_url else config.site_url }}">
+  <meta property="og:image" content="{{ config.site_url }}assets/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ social_title }}">
+  <meta name="twitter:description" content="{{ social_description }}">
+  <meta name="twitter:image" content="{{ config.site_url }}assets/social-card.png">
+  <link rel="apple-touch-icon" href="{{ 'assets/apple-touch-icon.png' | url }}">
+  {% if page.is_homepage %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ config.site_author }}",
+    "alternateName": "Darius Nafar",
+    "url": "{{ config.site_url }}",
+    "image": "{{ config.site_url }}assets/Profile.jpg",
+    "jobTitle": "PhD Candidate in Computer Science",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Michigan State University",
+      "sameAs": "https://msu.edu/"
+    },
+    "sameAs": {{ config.extra.social | map(attribute='link') | list | tojson }}
+  }
+  </script>
+  {% endif %}
+{% endblock %}

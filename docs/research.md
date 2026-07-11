@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Research
 
 ### Interactive Agentic Code Generation for Fine-Tuning LLMs

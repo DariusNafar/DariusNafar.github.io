@@ -2,19 +2,44 @@ site_name: Aliakbar Nafar (Darius)
 site_description: Research in NLP, LLMs, and neuro-symbolic reasoning by Darius (CS PhD @ MSU)
 site_author: Aliakbar Nafar
 site_url: https://www.anafar.me/
-repo_url: https://github.com/DariusNafar/DariusNafar.github.io
+copyright: '&copy; 2026 Aliakbar Nafar'
+
 theme:
-  name: null
-  custom_dir: 'cinder'
-  # With name: null, MkDocs never reads cinder/mkdocs_theme.yml, so the
-  # theme settings it would provide must be declared here instead.
-  static_templates:
-    - 404.html
-  shortcuts:
-    help: 191    # ?
-    next: 78     # n
-    previous: 80 # p
-    search: 83   # s
+  name: material
+  custom_dir: overrides
+  favicon: assets/favicon.ico
+  icon:
+    logo: material/school
+  font:
+    text: Inter
+    code: Roboto Mono
+  palette:
+    # Automatic mode follows the OS preference; the toggle cycles auto -> light -> dark.
+    - media: '(prefers-color-scheme)'
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - toc.follow
+    - content.code.copy
 
 nav:
   - Home: index.md
@@ -30,6 +55,12 @@ markdown_extensions:
   - footnotes
   - attr_list
   - def_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra:
   social:
@@ -42,24 +73,9 @@ extra:
     - icon: simple/googlescholar
       link: https://scholar.google.com/citations?user=RnsQD44AAAAJ&hl=en
       name: Google Scholar
-  # og:title/description/url and twitter:title/description are emitted
-  # per-page by the theme (cinder/base.html); only page-independent tags here.
-  meta:
-    - property: og:type
-      content: website
-    - property: og:image
-      content: https://www.anafar.me/assets/social-card.png
-    - property: og:image:width
-      content: "1200"
-    - property: og:image:height
-      content: "630"
-    - name: twitter:card
-      content: summary_large_image
-    - name: twitter:image
-      content: https://www.anafar.me/assets/social-card.png
 
 extra_css:
-  - assets/overrides.css
+  - assets/extra.css
 extra_javascript:
   - assets/gallery-slider.js
 

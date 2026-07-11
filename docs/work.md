@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Work Experience
 
 ### AI Extern @ BetterHelp

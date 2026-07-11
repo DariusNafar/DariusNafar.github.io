@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Talks & Presentations
 
 A selection of invited talks and conference presentations. Materials (slides, paper, code, video) and photo galleries are linked under each entry.

@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Publications
 
 - #### **An Agentic Framework for Neuro-Symbolic Programming**  
