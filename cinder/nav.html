@@ -1,3 +1,4 @@
+{% import "icons.html" as icons %}
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
 
@@ -44,7 +45,7 @@
                     {%- if 'search' in config['plugins'] and not config.theme.disable_nav_search %}
                     <li>
                         <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                            <i class="fas fa-search"></i> Search
+                            {{ icons.icon('search') }} Search
                         </a>
                     </li>
                     {%- endif %}
@@ -54,12 +55,12 @@
                     {%- if page and (page.next_page or page.previous_page) and not config.theme.disable_nav_previous_next %}
                     <li {% if not page.previous_page %}class="disabled"{% endif %}>
                         <a rel="prev" {% if page.previous_page %}href="{{ page.previous_page.url|url }}"{% endif %}>
-                            <i class="fas fa-arrow-left"></i> Previous
+                            {{ icons.icon('arrow-left') }} Previous
                         </a>
                     </li>
                     <li {% if not page.next_page %}class="disabled"{% endif %}>
                         <a rel="next" {% if page.next_page %}href="{{ page.next_page.url|url }}"{% endif %}>
-                            Next <i class="fas fa-arrow-right"></i>
+                            Next {{ icons.icon('arrow-right') }}
                         </a>
                     </li>
                     {%- endif %}

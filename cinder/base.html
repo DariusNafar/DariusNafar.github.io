@@ -1,3 +1,4 @@
+{% import "icons.html" as icons %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,8 +7,17 @@
     {% block early_head %}{% endblock %}
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% if config.site_description %}<meta name="description" content="{{ config.site_description }}">{% endif %}
+    {% set social_description = page.meta.description if page and page.meta and page.meta.description else config.site_description %}
+    {% set social_title = (page.title ~ ' - ' ~ config.site_name) if page and page.title and not page.is_homepage else config.site_name %}
+    {% if social_description %}<meta name="description" content="{{ social_description }}">{% endif %}
     {% if config.site_author %}<meta name="author" content="{{ config.site_author }}">{% endif %}
+    <meta property="og:title" content="{{ social_title }}">
+    <meta name="twitter:title" content="{{ social_title }}">
+    {% if social_description %}
+    <meta property="og:description" content="{{ social_description }}">
+    <meta name="twitter:description" content="{{ social_description }}">
+    {% endif %}
+    <meta property="og:url" content="{{ page.canonical_url if page and page.canonical_url else config.site_url }}">
     {% if config.extra and config.extra.meta %}
         {% for meta in config.extra.meta %}
             {% if not (meta.get('name') == 'description' and config.site_description) %}
@@ -21,14 +31,12 @@
     {% endif %}
     {% if page.canonical_url %}<link rel="canonical" href="{{ page.canonical_url }}">{% endif %}
     <link rel="shortcut icon" href="{{ 'img/favicon.ico'|url }}">
+    <link rel="apple-touch-icon" href="{{ 'img/apple-touch-icon.png'|url }}">
 
     {% block htmltitle %}
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
     {% endblock %}
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
     <link href="https://rsms.me/inter/inter.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin" rel="stylesheet" type="text/css">
     <link href="{{ 'css/bootstrap-custom.min.css'|url }}" rel="stylesheet">
@@ -45,6 +53,26 @@
             <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
         <![endif]-->
 
+    {% if page and page.is_homepage %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "{{ config.site_author }}",
+      "alternateName": "Darius Nafar",
+      "url": "{{ config.site_url }}",
+      "image": "{{ config.site_url }}assets/Profile.jpg",
+      "jobTitle": "PhD Candidate in Computer Science",
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "Michigan State University",
+        "sameAs": "https://msu.edu/"
+      },
+      "sameAs": {{ config.extra.social | map(attribute='link') | list | tojson }}
+    }
+    </script>
+    {% endif %}
+
     {% block extrahead %} {% endblock %}
 </head>
 
@@ -59,22 +87,22 @@
               <img src="{{ 'assets/Profile.jpg'|url }}" alt="Profile photo" style="max-width: 50%; border-radius: 50%; margin-bottom: 15px;">
               <div class="contact-links" style="text-align: left;">
                 <ul class="list-unstyled" style="margin-bottom: 10px;">
-                  <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span>Michigan, USA</span></li>
-                  <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:&#110;&#97;&#102;&#97;&#114;&#97;&#108;&#105;&#64;&#109;&#115;&#117;&#46;&#101;&#100;&#117;">Email</a></li>
+                  <li>{{ icons.icon('map-marker-alt') }} <span>Michigan, USA</span></li>
+                  <li>{{ icons.icon('envelope') }} <a href="mailto:&#110;&#97;&#102;&#97;&#114;&#97;&#108;&#105;&#64;&#109;&#115;&#117;&#46;&#101;&#100;&#117;">Email</a></li>
                   {% for s in config.extra.social %}
                     {% set n = s.name|lower %}
                     {% if 'github' in n %}
-                      {% set icon_class = 'fab fa-github' %}
+                      {% set icon_name = 'github' %}
                     {% elif 'linkedin' in n %}
-                      {% set icon_class = 'fab fa-linkedin' %}
+                      {% set icon_name = 'linkedin' %}
                     {% elif 'scholar' in n %}
-                      {% set icon_class = 'fas fa-graduation-cap' %}
+                      {% set icon_name = 'graduation-cap' %}
                     {% elif 'twitter' in n %}
-                      {% set icon_class = 'fab fa-x-twitter' %}
+                      {% set icon_name = 'x-twitter' %}
                     {% else %}
-                      {% set icon_class = 'fas fa-link' %}
+                      {% set icon_name = 'link' %}
                     {% endif %}
-                    <li><i class="{{ icon_class }}" aria-hidden="true"></i> <a href="{{ s.link }}" target="_blank" rel="noopener">{{ s.name }}</a></li>
+                    <li>{{ icons.icon(icon_name) }} <a href="{{ s.link }}" target="_blank" rel="noopener">{{ s.name }}</a></li>
                   {% endfor %}
                 </ul>
 

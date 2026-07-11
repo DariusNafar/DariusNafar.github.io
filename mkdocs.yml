@@ -42,17 +42,11 @@ extra:
     - icon: simple/googlescholar
       link: https://scholar.google.com/citations?user=RnsQD44AAAAJ&hl=en
       name: Google Scholar
+  # og:title/description/url and twitter:title/description are emitted
+  # per-page by the theme (cinder/base.html); only page-independent tags here.
   meta:
-    - name: description
-      content: Research in NLP, LLMs, and neuro-symbolic reasoning by Darius (CS PhD @ MSU)
-    - property: og:title
-      content: Darius - CS PhD @ MSU
-    - property: og:description
-      content: Research in NLP, LLMs, and neuro-symbolic reasoning
     - property: og:type
       content: website
-    - property: og:url
-      content: https://www.anafar.me/
     - property: og:image
       content: https://www.anafar.me/assets/social-card.png
     - property: og:image:width
@@ -61,10 +55,6 @@ extra:
       content: "630"
     - name: twitter:card
       content: summary_large_image
-    - name: twitter:title
-      content: Darius - CS PhD @ MSU
-    - name: twitter:description
-      content: Research in NLP, LLMs, and neuro-symbolic reasoning
     - name: twitter:image
       content: https://www.anafar.me/assets/social-card.png
 
