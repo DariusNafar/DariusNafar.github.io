@@ -85,15 +85,6 @@ Jan 2021 – Oct 2026
 
 <div class="entry" markdown>
 
-### M.S. in Computer Science @ Michigan State University
-
-2024
-{ .when }
-
-</div>
-
-<div class="entry" markdown>
-
 ### B.Sc. in Software Engineering @ Sharif University of Technology
 
 2014 – 2019
