@@ -22,6 +22,9 @@
   <meta name="twitter:image" content="{{ config.site_url }}assets/social-card.png">
   <link rel="apple-touch-icon" href="{{ 'assets/apple-touch-icon.png' | url }}">
   {% if page.is_homepage %}
+  {# Profile links for structured data: every social link except the mailto one #}
+  {% set ns = namespace(links=[]) %}
+  {% for item in config.extra.social %}{% if not item.link.startswith('mailto:') %}{% set ns.links = ns.links + [item.link] %}{% endif %}{% endfor %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -30,13 +33,18 @@
     "alternateName": "Darius Nafar",
     "url": "{{ config.site_url }}",
     "image": "{{ config.site_url }}assets/Profile.jpg",
-    "jobTitle": "PhD Candidate in Computer Science",
-    "affiliation": {
+    "jobTitle": "Machine Learning Engineer II",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "BetterHelp",
+      "sameAs": "https://www.betterhelp.com/"
+    },
+    "alumniOf": {
       "@type": "CollegeOrUniversity",
       "name": "Michigan State University",
       "sameAs": "https://msu.edu/"
     },
-    "sameAs": {{ config.extra.social | map(attribute='link') | list | tojson }}
+    "sameAs": {{ ns.links | tojson }}
   }
   </script>
   {% endif %}
